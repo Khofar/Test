@@ -1,30 +1,42 @@
-<style>
-  /* REMOVE Google Translate UI */
-  .goog-te-banner-frame.skiptranslate,
-  .goog-te-gadget-icon,
-  .goog-te-gadget-simple,
-  .goog-te-menu-value span,
-  .goog-te-menu-frame,
-  iframe.goog-te-banner-frame,
-  .goog-tooltip,
-  .goog-tooltip:hover,
-  .goog-text-highlight {
-    display: none !important;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+}
 
-  /* Prevent page shift from banner */
-  body {
-    top: 0px !important;
-  }
+.lang-switcher {
+  margin: 20px 0;
+}
 
-  /* Optional: kill branding */
-  .goog-logo-link,
-  .goog-te-gadget span {
-    display: none !important;
-  }
+select {
+  font-size: 18px;
+  padding: 8px 12px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
 
-  /* Kill extra weird spacing on mobile */
-  html {
-    margin-top: 0 !important;
-  }
-</style>
+/* FULL INVISIBILITY MODE 🥷 */
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+.goog-logo-link,
+.goog-te-gadget,
+.goog-te-gadget-icon,
+.goog-te-menu-frame,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-te-menu-value span,
+.goog-text-highlight {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+html {
+  margin-top: 0 !important;
+}
