@@ -1,0 +1,13 @@
+body {
+	font-family: Arial, sans-serif;
+	background: #0d0d0d;
+	color: #fff;
+	padding: 20px;
+}
+
+#google_translate_element {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+}
