@@ -1,3 +1,35 @@
+/* Hides the widget bubble */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+.goog-te-gadget-simple,
+.goog-te-menu-value span {
+  display: none !important;
+}
+
+/* Kill the top blue banner that appears after switching language */
+body > .goog-te-banner-frame {
+  display: none !important;
+  height: 0 !important;
+}
+
+/* Make sure body doesn’t get pushed down by banner */
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+/* Hide iframe leftovers */
+iframe.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* Kill weird font resizing */
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+
 body {
 	font-family: Arial, sans-serif;
 	background: #0d0d0d;
