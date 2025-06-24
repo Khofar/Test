@@ -19,11 +19,3 @@ document.getElementById('languageSelect').addEventListener('change', function() 
   gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
   document.body.appendChild(gtScript);
 })(); 
-
-setTimeout(() => {
-  if (typeof google === 'undefined') {
-    alert("❌ Google Translate script failed to load.");
-  } else {
-    alert("✅ Google Translate script loaded!");
-  }
-}, 2000);
