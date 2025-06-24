@@ -1,45 +1,30 @@
-/* Hides the widget bubble */
-.goog-te-banner-frame.skiptranslate,
-.goog-te-gadget-icon,
-.goog-te-gadget-simple,
-.goog-te-menu-value span {
-  display: none !important;
-}
+<style>
+  /* REMOVE Google Translate UI */
+  .goog-te-banner-frame.skiptranslate,
+  .goog-te-gadget-icon,
+  .goog-te-gadget-simple,
+  .goog-te-menu-value span,
+  .goog-te-menu-frame,
+  iframe.goog-te-banner-frame,
+  .goog-tooltip,
+  .goog-tooltip:hover,
+  .goog-text-highlight {
+    display: none !important;
+  }
 
-/* Kill the top blue banner that appears after switching language */
-body > .goog-te-banner-frame {
-  display: none !important;
-  height: 0 !important;
-}
+  /* Prevent page shift from banner */
+  body {
+    top: 0px !important;
+  }
 
-/* Make sure body doesn’t get pushed down by banner */
-body {
-  top: 0px !important;
-  position: static !important;
-}
+  /* Optional: kill branding */
+  .goog-logo-link,
+  .goog-te-gadget span {
+    display: none !important;
+  }
 
-/* Hide iframe leftovers */
-iframe.goog-te-banner-frame {
-  display: none !important;
-}
-
-/* Kill weird font resizing */
-.goog-text-highlight {
-  background: none !important;
-  box-shadow: none !important;
-}
-
-
-body {
-	font-family: Arial, sans-serif;
-	background: #0d0d0d;
-	color: #fff;
-	padding: 20px;
-}
-
-#google_translate_element {
-	position: fixed;
-	top: 10px;
-	right: 10px;
-	z-index: 9999;
-}
+  /* Kill extra weird spacing on mobile */
+  html {
+    margin-top: 0 !important;
+  }
+</style>
