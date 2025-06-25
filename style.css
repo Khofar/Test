@@ -1,21 +1,31 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
-  padding: 20px;
+	font-family: Arial, sans-serif;
+	background: #111;
+	color: #fff;
+	padding: 20px;
+}
+
+#galaxy-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #000;
 }
 
 .lang-switcher {
-  margin: 20px 0;
+	margin: 20px 0;
 }
 
 select {
-  font-size: 18px;
-  padding: 8px 12px;
-  background: #222;
-  color: #fff;
-  border: 1px solid #555;
-  border-radius: 5px;
+	font-size: 18px;
+	padding: 8px 12px;
+	background: #222;
+	color: #fff;
+	border: 1px solid #555;
+	border-radius: 5px;
 }
 
 /* FULL INVISIBILITY MODE 🥷 */
@@ -29,14 +39,14 @@ iframe.goog-te-banner-frame,
 .goog-tooltip:hover,
 .goog-te-menu-value span,
 .goog-text-highlight {
-  display: none !important;
+	display: none !important;
 }
 
 body {
-  top: 0px !important;
-  position: static !important;
+	top: 0px !important;
+	position: static !important;
 }
 
 html {
-  margin-top: 0 !important;
+	margin-top: 0 !important;
 }
