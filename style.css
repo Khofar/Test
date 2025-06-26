@@ -1,52 +1,29 @@
 body {
-	font-family: Arial, sans-serif;
-	background: #111;
-	color: #fff;
-	padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
 }
 
-#galaxy-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background: #000;
+input, button {
+  padding: 10px 15px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
 }
 
-.lang-switcher {
-	margin: 20px 0;
+button {
+  background: #00c896;
+  color: white;
+  cursor: pointer;
 }
 
-select {
-	font-size: 18px;
-	padding: 8px 12px;
-	background: #222;
-	color: #fff;
-	border: 1px solid #555;
-	border-radius: 5px;
-}
-
-/* FULL INVISIBILITY MODE 🥷 */
-.goog-te-banner-frame.skiptranslate,
-iframe.goog-te-banner-frame,
-.goog-logo-link,
-.goog-te-gadget,
-.goog-te-gadget-icon,
-.goog-te-menu-frame,
-.goog-tooltip,
-.goog-tooltip:hover,
-.goog-te-menu-value span,
-.goog-text-highlight {
-	display: none !important;
-}
-
-body {
-	top: 0px !important;
-	position: static !important;
-}
-
-html {
-	margin-top: 0 !important;
+#secret {
+  display: none;
+  margin-top: 30px;
+  border: 2px solid #00c896;
+  padding: 20px;
+  border-radius: 10px;
 }

@@ -1,28 +1,38 @@
-// Initialize Google Translate silently
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    autoDisplay: false
-  }, 'google_translate_element');
+const firebaseConfig = {
+  apiKey: "AIzaSyCMw6LUtfaYFh8-wvkT54yDykieav7naV8",
+  authDomain: "khofar-site-comments.firebaseapp.com",
+  projectId: "khofar-site-comments",
+  storageBucket: "khofar-site-comments.firebasestorage.app",
+  messagingSenderId: "853499937990",
+  appId: "1:853499937990:web:d6150ffaa6c0b8b10b83c7"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+function loginUser() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+      document.getElementById("secret").style.display = "block";
+    })
+    .catch((error) => {
+      alert("❌ Login failed: " + error.message);
+    });
 }
 
-// Language dropdown behavior
-document.addEventListener('DOMContentLoaded', () => {
-  const select = document.getElementById('languageSelect');
-
-  select.addEventListener('change', function () {
-    const lang = this.value;
-    const currentUrl = window.location.origin + window.location.pathname;
-    const newUrl = currentUrl + '#googtrans(en|' + lang + ')';
-    window.location.href = newUrl;
-
-    setTimeout(() => {
-      window.location.reload();
-    }, 100);
+function logoutUser() {
+  auth.signOut().then(() => {
+    document.getElementById("secret").style.display = "none";
   });
+}
 
-  // Load Google Translate script
-  const script = document.createElement('script');
-  script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-  document.body.appendChild(script);
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    document.getElementById("secret").style.display = "block";
+  } else {
+    document.getElementById("secret").style.display = "none";
+  }
 });
