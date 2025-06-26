@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Khofar's Secret Page 🚀</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <h1>🔐 Log in to Unlock the Secret</h1>
+  <input id="email" type="email" placeholder="Email" /><br>
+  <input id="password" type="password" placeholder="Password" /><br>
+  <button onclick="loginUser()">Login</button>
+  
+  <div id="secret">
+    <h2>🎉 Welcome to the VIP Zone</h2>
+    <p>You've unlocked the secret content of the realm 🧙‍♂️✨</p>
+    <button onclick="logoutUser()">Log Out</button>
+  </div>
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
